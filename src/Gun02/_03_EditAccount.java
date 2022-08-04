@@ -20,45 +20,32 @@ public class _03_EditAccount extends GenelWebDriver {
     @Test(priority = 1)
     void edit1(){
         for (int i = 0; i < 2; i++) {
-            editTest();
+            editTest("Ali","TEZCAN");
         }
     }
 
 
-@Test(priority = 3)
+@Test(priority = 2)
     void editTestEskiHali(){
 
-        WebElement edit= driver.findElement(By.linkText("Edit Account"));
-        edit.click();
-
-        WebElement name= driver.findElement(By.cssSelector("input[name='firstname']"));
-        name.clear();
-        name.sendKeys("Yasar");
-
-        WebElement lastname= driver.findElement(By.cssSelector("input[name='lastname']"));
-        lastname.clear();
-        lastname.sendKeys("DERELI");
-
-        WebElement continueButton= driver.findElement(By.cssSelector("input[value='Continue']"));
-        continueButton.click();
-
+        editTest("Yaşar","DERELİ");
 
         Tools.successMessageValidation();
 
     }
 
-    void editTest(){
+    void editTest(String ad,String soyad){
 
         WebElement edit= GenelWebDriver.driver.findElement(By.linkText("Edit Account"));
         edit.click();
 
         WebElement name= GenelWebDriver.driver.findElement(By.cssSelector("input[name='firstname']"));
         name.clear();
-        name.sendKeys("Ali");
+        name.sendKeys(ad);
 
         WebElement lastname= GenelWebDriver.driver.findElement(By.cssSelector("input[name='lastname']"));
         lastname.clear();
-        lastname.sendKeys("TEZCAN");
+        lastname.sendKeys(soyad);
 
         WebElement continueButton= GenelWebDriver.driver.findElement(By.cssSelector("input[value='Continue']"));
         continueButton.click();

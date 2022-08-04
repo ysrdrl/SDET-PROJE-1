@@ -22,7 +22,7 @@ public class Tools {
 
         WebElement success= GenelWebDriver.driver.findElement(By.cssSelector("div[class$='alert-dismissible']"));
 
-        Assert.assertTrue(success.getText().contains("Success"));
+        Assert.assertTrue(success.getText().toLowerCase().contains("success"));
 
     }
 
