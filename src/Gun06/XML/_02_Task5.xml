@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit 1">
+    
+    <parameter name="test1" value=""></parameter>
+    <parameter name="browser" value="firefox"></parameter>
+
+
+
+
+
+    <test name="Test 1">
+        <classes>
+            <class name="Gun06._05_Task"> </class>
+        </classes>
+    </test>
+</suite>

@@ -62,10 +62,13 @@ public class _02_AddressFunctionality extends GenelWebDriver {
         Select ddMenu=new Select(selectCountry);
         ddMenu.selectByVisibleText("Turkey");
 
+        wait.until(ExpectedConditions.stalenessOf(driver.findElement(By.cssSelector("select[id='input-zone']>option"))));
+        //bu elemanın bayatlamış hali gidene kadar bekle
 
         WebElement findState=driver.findElement(By.id("input-zone"));
         ddMenu=new Select(findState);
-        ddMenu.selectByVisibleText("Trabzon");
+        //ddMenu.selectByVisibleText("Trabzon");
+        ddMenu.selectByIndex(10);
 
         WebElement continueButton=driver.findElement(By.cssSelector("input[type='submit'][value='Continue']"));
         continueButton.click();
